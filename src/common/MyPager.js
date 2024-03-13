@@ -26,6 +26,10 @@ import BigText from "../common/reusables/texts/BigText";
 import RegularText from "../common/reusables/texts/RegularText";
 import SmallText from "../common/reusables/texts/SmallText";
 
+import stmary from "../../assets/images/stmary.jpeg";
+// import stmary from "../../assets/images/";
+
+
 const AnimatedPagerView = Animated.createAnimatedComponent(PagerView);
 
 import logo from "../../assets/icon.png";
@@ -34,12 +38,12 @@ import { useDispatch, useSelector } from "react-redux";
 const INTRO_DATA = [
   {
     key: 0,
-    image: logo,
+    image: stmary,
     title: "Register ✨",
-    titleAm: "ይመዝገቡ ✨",
+    titleAm: "ዉዳሴ ማርያም ✨",
     description: 
       "fill all the inputs in the registration form, Verify your phone number",
-    descriptionAm: "በመመዝገቢያ ቅጽ ውስጥ ያሉትን ሁሉንም ግብዓቶች ይሙሉ ፣ የስልክ ቁጥርዎን ያረጋግጡ",
+    descriptionAm: "ውዳሴ ማርያም የሶርያው ቅዱስ ኤፍሬም የደረሰውና በኢትዮጵያ ኦርቶዶክስ ተዋህዶ ቤተ ክርስቲያን ከጥንት ጀምሮ በጣም የታወቀና የተወደደ ጸሎት (የጸሎት መጽሐፍ) ነው ይኸውም እመቤታችን ድንግል ማርያምን በብዙ ምሳሌ እየመሰለ የሚያወድስ፤ ሥነ-ጽሑፋዊ ውበት ያለው በመሆኑ ደግሞ ከጸሎትነቱም ባሻገር ጥልቅ ምስጢር ያለበት ትምህርት የሚሰጥ ነው።",
   },
   {
     key: 1,
@@ -144,11 +148,11 @@ export default function MyPager({ navigation }) {
                 flexDirection: "row",
               }}
             >
-              <TouchableOpacity onPress={dispatchChange}>
+              {/* <TouchableOpacity onPress={dispatchChange}>
                 <Text style={{ color: colors.ddGameColor, fontWeight: "bold" }}>
                   {t("auth.language")}
                 </Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
             </View>
             <Image source={INTRO_DATA[key].image} style={styles.nowhiteStyle} />
             <BigText>
@@ -187,7 +191,8 @@ export default function MyPager({ navigation }) {
           }}
         />
         <DDLinkButton
-          label={t("general.skip")}
+          // label={t("general.skip")}
+          label="አቋርጥ"
           style={{ color: colors.ddThemeColor }}
           onPress={() => {
             navigation.navigate(Login);
@@ -260,8 +265,8 @@ const styles = StyleSheet.create({
   },
   nowhiteStyle: {
     margin: 15,
-    width: 100,
-    height: 100,
+    width: 300,
+    height: 300,
     resizeMode: "contain",
   },
 });
