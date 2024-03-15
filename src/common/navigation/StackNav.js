@@ -1,6 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
+
 import { colors } from "../reusables/colors";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
@@ -29,16 +30,18 @@ const StackNav = ({ navigation }) => {
           headerTintColor: colors.ddTextColor,
         }}
       >
-         <Stack.Screen
-          name="MyPager"
-          options={{ headerShown: false, headerTitle: t("login.login") }}
-          component={MyPager}
-        />
         <Stack.Screen
           name="Login"
           options={{ headerShown: false, headerTitle: t("login.login") }}
           component={Login}
         />
+
+        <Stack.Screen
+          name="MyPager"
+          options={{ headerShown: false, headerTitle: t("login.login") }}
+          component={MyPager}
+        />
+
         <Stack.Screen
           name="Apphome"
           options={{ headerShown: false, headerTitle: t("login.login") }}

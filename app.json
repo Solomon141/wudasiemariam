@@ -4,7 +4,7 @@
     "slug": "wudasiemariam",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon1024.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
+        "foregroundImage": "./assets/icon1024.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.solomon141.wudasiemariam"
     },
     "web": {
       "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2c2aca4c-ada0-4cec-9cd9-73798697bd6e"
+      }
     }
   }
 }
