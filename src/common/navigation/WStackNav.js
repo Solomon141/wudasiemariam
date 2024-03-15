@@ -3,7 +3,11 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Wudasiemariam from "../../wudasiemariam/Wudasiemariam";
+import { colors } from "../reusables/colors";
+
 const Stack = createStackNavigator();
+
+import WDDNav from "./WDDNav";
 
 const WStackNav = () => {
   return (
@@ -15,11 +19,10 @@ const WStackNav = () => {
           headerTintColor: colors.ddTextColor,
         }}
       >
-       
         <Stack.Screen
           name="Wudasiemariam"
           options={{ headerShown: false, headerTitle: "ውዳሴ ማርያም" }}
-          component={Wudasiemariam}
+          component={WDDNav}
         />
       </Stack.Navigator>
     </NavigationContainer>
